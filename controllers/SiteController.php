@@ -91,4 +91,10 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    // http://localhost/yii2-hello/web/index.php?r=site%2Fsay
+    public function actionSay($target = 'World')
+    {
+        return $this->render('say', ['target' => $target]);
+    }
 }
